@@ -13,8 +13,16 @@ function removeTransition(e) {
     audio.play();
   }
 
+  function dance(){
+    const rightHand = document.querySelector('.right-hand');
+    const leftHand = document.querySelector('.left-hand');
+    rightHand.classList.add('dancing');
+    leftHand.classList.add('dancing-left');
+  }
+
   const keys = Array.from(document.querySelectorAll('.key'));
 
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   
   window.addEventListener('keydown', playSound);
+  window.addEventListener('keydown', dance);

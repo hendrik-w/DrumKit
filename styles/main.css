@@ -12,10 +12,11 @@
 
 body {
     display: grid;
-    grid-template-rows: 15vh 85vh;
+    grid-template-rows: 15vh 45vh 40vh;
     grid-template-columns: 100vw;
     grid-template-areas: 
     "top"
+    "penguin"
     "content";
 
     font-family: var(--main-font, Courier);
@@ -30,6 +31,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+section#penguin {
+    grid-area: penguin;
 }
 
 section#content-area {
@@ -47,6 +52,7 @@ h1 {
     font-size: 3em;
     font-weight: 800;
     color: rgb(var(--secondary-color));
+    text-shadow: 0 0 .5rem black;
 }
 
 section#content-area div.keys {
@@ -63,7 +69,6 @@ div.keys div.key {
     border-radius: 10px;
     transition: all .07s ease;
     text-shadow: 0 0 .5rem black;
-
 }
 
 div.key span.sound {
